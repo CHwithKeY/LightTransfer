@@ -7,7 +7,10 @@
 
     <color name="colorBackground">#ffe837</color>
     <color name="colorAssist">#99CCFF</color>
+    <color name="colorAssistDark">#7fb8f1</color>
     <color name="colorMain">#FF6666</color>
+
     <color name="colorLightGray">#ddd</color>
+    <color name="colorWhiteTransparent">#fafafa</color>
 
 </resources>

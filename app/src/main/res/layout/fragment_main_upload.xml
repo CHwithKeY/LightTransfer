@@ -18,6 +18,19 @@
         android:layout_gravity="center"
         android:background="@drawable/dw_assist_circle" />
 
+    <View
+        android:id="@+id/main_scale_bg"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:background="@drawable/dw_assist_dark_circle" />
+
+    <View
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:background="@drawable/dw_assist_circle" />
+
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/main_download_fab"
         android:layout_width="wrap_content"
@@ -35,6 +48,12 @@
         android:scaleType="center"
         android:src="@drawable/ic_main_lightning"
         app:fabSize="normal" />
+
+    <Button
+        android:id="@+id/test_anim_btn"
+        android:text="test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 
 </FrameLayout>
