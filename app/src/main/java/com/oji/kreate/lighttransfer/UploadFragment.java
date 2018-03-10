@@ -80,8 +80,8 @@ public class UploadFragment extends Base_Frag {
         upload_fab = view.findViewById(R.id.main_upload_fab);
         download_fab = view.findViewById(R.id.main_download_fab);
         showUploadFab();
-        sato0.setDuration(500);
-        sato1.setDuration(500);
+        sato0.setDuration(700);
+        sato1.setDuration(700);
 
         sato0.setAnimationListener(new Animation.AnimationListener() {
             @Override
@@ -92,15 +92,15 @@ public class UploadFragment extends Base_Frag {
             @Override
             public void onAnimationEnd(Animation animation) {
 
-                if (upload_fab.getVisibility() == View.VISIBLE) {
-                    upload_fab.setAnimation(null);
-                    showDownloadFab();
-                    download_fab.startAnimation(sato1);
-                } else {
-                    download_fab.setAnimation(null);
-                    showUploadFab();
-                    upload_fab.startAnimation(sato1);
-                }
+//                if (upload_fab.getVisibility() == View.VISIBLE) {
+//                    upload_fab.setAnimation(null);
+//                    showDownloadFab();
+//                    download_fab.startAnimation(sato1);
+//                } else {
+//                    download_fab.setAnimation(null);
+//                    showUploadFab();
+//                    upload_fab.startAnimation(sato1);
+//                }
             }
 
             @Override
