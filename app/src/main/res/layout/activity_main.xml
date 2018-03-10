@@ -5,8 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clipChildren="false"
-    android:layerType="software"
     tools:context="com.oji.kreate.lighttransfer.MainActivity">
+
+    <Button
+        android:id="@+id/main_test_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Move" />
 
     <!--<TextView-->
     <!--android:id="@+id/main_notification_tv"-->
@@ -66,83 +71,90 @@
         android:layout_centerInParent="true"
         android:clipChildren="false" />
 
-    <android.support.v7.widget.ButtonBarLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="@dimen/item_divider"
-        android:gravity="center"
-        android:orientation="horizontal">
+        android:layout_alignParentBottom="true">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
+        <android.support.v7.widget.ButtonBarLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/item_divider"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
-            <android.support.design.widget.FloatingActionButton
-                android:id="@+id/main_text_fab"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:scaleType="center"
-                android:src="@drawable/ic_main_text"
-                app:fabSize="normal" />
+                android:gravity="center"
+                android:orientation="vertical">
 
-            <TextView
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/main_text_fab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_main_text"
+                    app:fabSize="normal" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/item_divider"
+                    android:text="文本" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/item_divider"
-                android:text="文本" />
+                android:layout_marginLeft="@dimen/item_three_time_divider"
+                android:layout_marginRight="@dimen/item_three_time_divider"
+                android:gravity="center"
+                android:orientation="vertical">
 
-        </LinearLayout>
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/main_image_fab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_main_image"
+                    app:fabSize="normal" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/item_three_time_divider"
-            android:layout_marginRight="@dimen/item_three_time_divider"
-            android:gravity="center"
-            android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/item_divider"
+                    android:text="图片" />
 
-            <android.support.design.widget.FloatingActionButton
-                android:id="@+id/main_image_fab"
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:scaleType="center"
-                android:src="@drawable/ic_main_image"
-                app:fabSize="normal" />
+                android:gravity="center"
+                android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/item_divider"
-                android:text="图片" />
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/main_file_fab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_main_file"
+                    app:fabSize="normal" />
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/item_divider"
+                    android:text="文件" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical">
+            </LinearLayout>
 
-            <android.support.design.widget.FloatingActionButton
-                android:id="@+id/main_file_fab"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:scaleType="center"
-                android:src="@drawable/ic_main_file"
-                app:fabSize="normal" />
+        </android.support.v7.widget.ButtonBarLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/item_divider"
-                android:text="文件" />
-
-        </LinearLayout>
-
-    </android.support.v7.widget.ButtonBarLayout>
+    </FrameLayout>
 
 
     <!--<android.support.design.widget.FloatingActionButton-->

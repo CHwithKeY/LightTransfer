@@ -1,10 +1,18 @@
 package com.oji.kreate.lighttransfer;
 
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.view.animation.ScaleAnimation;
+import android.view.animation.TranslateAnimation;
+import android.widget.Button;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.oji.kreate.vsf.base.Base_Act;
 import com.oji.kreate.vsf.publicAdapter.ViewTitleAdapter;
@@ -30,6 +38,8 @@ public class MainActivity extends Base_Act {
         setupToolbar();
 
         setupViewPager();
+
+        setupAlpha();
     }
 
     @Override
@@ -70,6 +80,25 @@ public class MainActivity extends Base_Act {
 
         function_vp.setAdapter(titleAdapter);
 //        function_tab.setupWithViewPager(function_vp);
+    }
+
+    private View text_fab_bg;
+    private ScaleAnimation san0 = new ScaleAnimation(0, 50f, 0, 50f,
+            Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+
+
+    private void setupAlpha() {
+        text_fab_bg = findViewById(R.id.main_fab_bg);
+        final Button test_btn = findViewById(R.id.main_test_btn);
+        test_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                text_fab_bg.startAnimation(san0);
+            }
+        });
+
+        san0.setDuration(400);
+
     }
 
     @Override

@@ -1,5 +1,6 @@
 package com.oji.kreate.lighttransfer;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -7,8 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
-import android.view.animation.RotateAnimation;
 import android.view.animation.ScaleAnimation;
+import android.widget.Button;
 
 import com.oji.kreate.vsf.base.Base_Frag;
 
@@ -22,13 +23,16 @@ public class UploadFragment extends Base_Frag {
 
     private FloatingActionButton upload_fab;
     private FloatingActionButton download_fab;
+    private View bg_view;
 
     private ScaleAnimation sato0 = new ScaleAnimation(1, 0, 1, 1,
-            Animation.RELATIVE_TO_PARENT, 0.5f, Animation.RELATIVE_TO_PARENT, 0.5f);
+            Animation.RELATIVE_TO_PARENT, 0.1f, Animation.RELATIVE_TO_PARENT, 0.5f);
 
     private ScaleAnimation sato1 = new ScaleAnimation(0, 1, 1, 1,
-            Animation.RELATIVE_TO_PARENT, 0.5f, Animation.RELATIVE_TO_PARENT, 0.5f);
+            Animation.RELATIVE_TO_PARENT, 0.1f, Animation.RELATIVE_TO_PARENT, 0.5f);
 
+    private ScaleAnimation san0 = new ScaleAnimation(0, 10f, 0, 10f,
+            Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
 
     // Test GitHub merge function
     private ScaleAnimation sato2 = new ScaleAnimation(0, 1, 1, 1,
@@ -54,7 +58,8 @@ public class UploadFragment extends Base_Frag {
 
         initView(view);
 
-        upload_fab.setOnClickListener(new View.OnClickListener() {
+        final Button test_btn = view.findViewById(R.id.test_anim_btn);
+        test_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (upload_fab.getVisibility() == View.VISIBLE) {
@@ -73,33 +78,67 @@ public class UploadFragment extends Base_Frag {
 
     private void showDownloadFab() {
         upload_fab.setVisibility(View.GONE);
-        download_fab.setVisibility(View.VISIBLE);
+        download_fab.setVisibility(View.VISIBLE;
     }
 
     private void initView(View view) {
         upload_fab = view.findViewById(R.id.main_upload_fab);
         download_fab = view.findViewById(R.id.main_download_fab);
         showUploadFab();
-        sato0.setDuration(700);
-        sato1.setDuration(700);
+        sato0.setDuration(100);
+        sato1.setDuration(120);
+
+        sato0.setRepeatCount(4);
+        sato1.setRepeatCount(1);
+
+        bg_view = view.findViewById(R.id.main_scale_bg);
+        san0.setDuration(900);
+//        san0.setAnimationListener(new Animation.AnimationListener() {
+//            @Override
+//            public void onAnimationStart(Animation animation) {
+//
+//            }
+//
+//            @Override
+//            public void onAnimationEnd(Animation animation) {
+//                bg_view.setVisibility(View.INVISIBLE);
+//            }
+//
+//            @Override
+//            public void onAnimationRepeat(Animation animation) {
+//
+//            }
+//        });
 
         sato0.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
-
+                bg_view.startAnimation(san0);
             }
 
             @Override
             public void onAnimationEnd(Animation animation) {
 
-//                if (upload_fab.getVisibility() == View.VISIBLE) {
-//                    upload_fab.setAnimation(null);
-//                    showDownloadFab();
-//                    download_fab.startAnimation(sato1);
-//                } else {
-//                    download_fab.setAnimation(null);
-//                    showUploadFab();
-//                    upload_fab.startAnimation(sato1);
+                if (upload_fab.getVisibility() == View.VISIBLE) {
+                    upload_fab.setAnimation(null);
+                    showDownloadFab();
+                    download_fab.startAnimation(sato1);
+                } else {
+                    download_fab.setAnimation(null);
+                    showUploadFab();
+                    upload_fab.startAnimation(sato1);
+                }
+
+//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+//                    bg_view.postOnAnimationDelayed(new Runnable() {
+//                        @Override
+//                        public void run() {
+//                bg_view.startAnimation(san0);
+//                        }
+//                    }, 500);
+
+
+
 //                }
             }
 
