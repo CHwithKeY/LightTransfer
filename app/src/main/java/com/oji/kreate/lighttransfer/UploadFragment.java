@@ -30,6 +30,10 @@ public class UploadFragment extends Base_Frag {
             Animation.RELATIVE_TO_PARENT, 0.5f, Animation.RELATIVE_TO_PARENT, 0.5f);
 
 
+    // Test GitHub merge function
+    private ScaleAnimation sato2 = new ScaleAnimation(0, 1, 1, 1,
+            Animation.RELATIVE_TO_PARENT, 0.5f, Animation.RELATIVE_TO_PARENT, 0.5f);
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
