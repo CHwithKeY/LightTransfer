@@ -3,11 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/LightTransfer.iml" filepath="$PROJECT_DIR$/LightTransfer.iml" />
-      <module fileurl="file://E:\StudioSpace\LightTransfer\LightTransfer.iml" filepath="E:\StudioSpace\LightTransfer\LightTransfer.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://E:\StudioSpace\LightTransfer\app\app.iml" filepath="E:\StudioSpace\LightTransfer\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/vsf_1.2/vsf_1.2.iml" filepath="$PROJECT_DIR$/vsf_1.2/vsf_1.2.iml" />
-      <module fileurl="file://E:\StudioSpace\LightTransfer\vsf_1.2\vsf_1.2.iml" filepath="E:\StudioSpace\LightTransfer\vsf_1.2\vsf_1.2.iml" />
     </modules>
   </component>
 </project>
