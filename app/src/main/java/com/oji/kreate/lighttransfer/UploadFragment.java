@@ -34,10 +34,6 @@ public class UploadFragment extends Base_Frag {
     private ScaleAnimation san0 = new ScaleAnimation(0, 10f, 0, 10f,
             Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
 
-    // Test GitHub merge function
-    private ScaleAnimation sato2 = new ScaleAnimation(0, 1, 1, 1,
-            Animation.RELATIVE_TO_PARENT, 0.5f, Animation.RELATIVE_TO_PARENT, 0.5f);
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -78,7 +74,7 @@ public class UploadFragment extends Base_Frag {
 
     private void showDownloadFab() {
         upload_fab.setVisibility(View.GONE);
-        download_fab.setVisibility(View.VISIBLE;
+        download_fab.setVisibility(View.VISIBLE);
     }
 
     private void initView(View view) {
@@ -93,22 +89,26 @@ public class UploadFragment extends Base_Frag {
 
         bg_view = view.findViewById(R.id.main_scale_bg);
         san0.setDuration(900);
-//        san0.setAnimationListener(new Animation.AnimationListener() {
-//            @Override
-//            public void onAnimationStart(Animation animation) {
-//
-//            }
-//
-//            @Override
-//            public void onAnimationEnd(Animation animation) {
-//                bg_view.setVisibility(View.INVISIBLE);
-//            }
-//
-//            @Override
-//            public void onAnimationRepeat(Animation animation) {
-//
-//            }
-//        });
+        san0.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                if (upload_fab.getVisibility() == View.VISIBLE) {
+                    bg_view.setBackgroundDrawable(getResources().getDrawable(R.drawable.dw_land_circle));
+                } else {
+                    bg_view.setBackgroundDrawable(getResources().getDrawable(R.drawable.dw_assist_circle));
+                }
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
 
         sato0.setAnimationListener(new Animation.AnimationListener() {
             @Override
@@ -136,7 +136,6 @@ public class UploadFragment extends Base_Frag {
 //                bg_view.startAnimation(san0);
 //                        }
 //                    }, 500);
-
 
 
 //                }

@@ -12,5 +12,7 @@
 
     <color name="colorLightGray">#ddd</color>
     <color name="colorWhiteTransparent">#fafafa</color>
+    <color name="colorLand">#663300</color>
+
 
 </resources>

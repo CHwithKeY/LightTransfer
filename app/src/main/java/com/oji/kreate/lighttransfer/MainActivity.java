@@ -28,6 +28,10 @@ public class MainActivity extends Base_Act {
     //    private TabLayout function_tab;
     private ViewPager function_vp;
 
+    private FloatingActionButton text_fab;
+    private FloatingActionButton image_fab;
+    private FloatingActionButton file_fab;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,13 +42,11 @@ public class MainActivity extends Base_Act {
         setupToolbar();
 
         setupViewPager();
-
-        setupAlpha();
     }
 
     @Override
     public void varInit() {
-
+        text_fab = findViewById(R.id.main_text_fab);
     }
 
     @Override
@@ -82,24 +84,29 @@ public class MainActivity extends Base_Act {
 //        function_tab.setupWithViewPager(function_vp);
     }
 
-    private View text_fab_bg;
-    private ScaleAnimation san0 = new ScaleAnimation(0, 50f, 0, 50f,
-            Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
 
+    private void setupFabInitRebound() {
 
-    private void setupAlpha() {
-        text_fab_bg = findViewById(R.id.main_fab_bg);
-        final Button test_btn = findViewById(R.id.main_test_btn);
-        test_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                text_fab_bg.startAnimation(san0);
-            }
-        });
-
-        san0.setDuration(400);
 
     }
+
+
+//    The FAB is always on the top layer
+//    private AlphaAnimation alh0 = new AlphaAnimation(1.0f, 0.0f);
+//    private AlphaAnimation alh1 = new AlphaAnimation(0.0f, 1.0f);
+//
+//    int i = 0;
+//
+//    private void setupAlpha() {
+//        final FloatingActionButton text_fab = findViewById(R.id.main_text_fab);
+//
+//        alh0.setDuration(400);
+//        alh1.setDuration(400);
+//
+//        if (i % 2 == 0) {
+//            text_fab.startAnimation(alh0);
+//        }
+//    }
 
     @Override
     public void onMultiHandleResponse(String s, String s1) throws JSONException {
