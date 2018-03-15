@@ -42,11 +42,16 @@ public class MainActivity extends Base_Act {
         setupToolbar();
 
         setupViewPager();
+
+        setupFabInitRebound();
+
+        setupMoveTestBtn();
     }
 
     @Override
     public void varInit() {
         text_fab = findViewById(R.id.main_text_fab);
+        image_fab = findViewById(R.id.main_image_fab);
     }
 
     @Override
@@ -84,9 +89,88 @@ public class MainActivity extends Base_Act {
 //        function_tab.setupWithViewPager(function_vp);
     }
 
+    private void setupReboundAnim(final View view) {
+        TranslateAnimation tsa1 = new TranslateAnimation(
+                Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, 0.0f,
+                Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, -0.1f);
+
+        final TranslateAnimation tsa2 = new TranslateAnimation(
+                Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, 0.0f,
+                Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, 0.1f);
+
+        tsa1.setRepeatCount(1);
+//        tsa2.setRepeatCount(2);
+
+        tsa1.setDuration(50);
+        tsa2.setDuration(50);
+
+        tsa1.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                view.startAnimation(tsa2);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+            }
+        });
+
+        view.startAnimation(tsa1);
+    }
+
+    private void setupTranslateBottomAnim(final View view) {
+        TranslateAnimation tsa0 = new TranslateAnimation(
+                Animation.RELATIVE_TO_PARENT, 0.0f, Animation.RELATIVE_TO_PARENT, 0.0f,
+                Animation.RELATIVE_TO_PARENT, 1.0f, Animation.RELATIVE_TO_PARENT, 0.0f
+        );
+
+        tsa0.setDuration(300);
+
+        tsa0.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                setupReboundAnim(view);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+
+        view.startAnimation(tsa0);
+    }
+
+    private void setupMoveTestBtn() {
+        final Button move_btn = findViewById(R.id.main_test_btn);
+        move_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setupFabInitRebound();
+            }
+        });
+    }
 
     private void setupFabInitRebound() {
 
+        setupTranslateBottomAnim(text_fab);
+
+        image_fab.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                setupTranslateBottomAnim(image_fab);
+            }
+        }, 100);
 
     }
 

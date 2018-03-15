@@ -23,6 +23,7 @@ public class UploadFragment extends Base_Frag {
 
     private FloatingActionButton upload_fab;
     private FloatingActionButton download_fab;
+    private View bg_scale;
     private View bg_view;
 
     private ScaleAnimation sato0 = new ScaleAnimation(1, 0, 1, 1,
@@ -80,6 +81,8 @@ public class UploadFragment extends Base_Frag {
     private void initView(View view) {
         upload_fab = view.findViewById(R.id.main_upload_fab);
         download_fab = view.findViewById(R.id.main_download_fab);
+        bg_view = view.findViewById(R.id.main_upload_bg);
+
         showUploadFab();
         sato0.setDuration(100);
         sato1.setDuration(120);
@@ -87,7 +90,7 @@ public class UploadFragment extends Base_Frag {
         sato0.setRepeatCount(4);
         sato1.setRepeatCount(1);
 
-        bg_view = view.findViewById(R.id.main_scale_bg);
+        bg_scale = view.findViewById(R.id.main_scale_bg);
         san0.setDuration(900);
         san0.setAnimationListener(new Animation.AnimationListener() {
             @Override
@@ -97,9 +100,13 @@ public class UploadFragment extends Base_Frag {
 
             @Override
             public void onAnimationEnd(Animation animation) {
+                bg_scale.clearAnimation();
+
                 if (upload_fab.getVisibility() == View.VISIBLE) {
+                    bg_scale.setBackgroundDrawable(getResources().getDrawable(R.drawable.dw_assist_circle));
                     bg_view.setBackgroundDrawable(getResources().getDrawable(R.drawable.dw_land_circle));
                 } else {
+                    bg_scale.setBackgroundDrawable(getResources().getDrawable(R.drawable.dw_land_circle));
                     bg_view.setBackgroundDrawable(getResources().getDrawable(R.drawable.dw_assist_circle));
                 }
             }
@@ -113,27 +120,30 @@ public class UploadFragment extends Base_Frag {
         sato0.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
-                bg_view.startAnimation(san0);
+                bg_scale.startAnimation(san0);
             }
 
             @Override
             public void onAnimationEnd(Animation animation) {
 
                 if (upload_fab.getVisibility() == View.VISIBLE) {
-                    upload_fab.setAnimation(null);
+                    upload_fab.clearAnimation();
+//                    upload_fab.setAnimation(null);
                     showDownloadFab();
                     download_fab.startAnimation(sato1);
                 } else {
-                    download_fab.setAnimation(null);
+                    download_fab.clearAnimation();
+//                    download_fab.setAnimation(null);
                     showUploadFab();
                     upload_fab.startAnimation(sato1);
                 }
 
+
 //                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-//                    bg_view.postOnAnimationDelayed(new Runnable() {
+//                    bg_scale.postOnAnimationDelayed(new Runnable() {
 //                        @Override
 //                        public void run() {
-//                bg_view.startAnimation(san0);
+//                bg_scale.startAnimation(san0);
 //                        }
 //                    }, 500);
 
