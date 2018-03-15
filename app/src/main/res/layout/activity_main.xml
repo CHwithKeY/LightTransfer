@@ -71,109 +71,91 @@
         android:layout_centerInParent="true"
         android:clipChildren="false" />
 
-    <FrameLayout
+    <android.support.v7.widget.ButtonBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true">
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/item_divider"
+        android:gravity="center"
+        android:orientation="horizontal">
 
-        <android.support.v7.widget.ButtonBarLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/item_divider"
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
-            <LinearLayout
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/main_text_fab"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical">
+                android:scaleType="center"
+                android:src="@drawable/ic_main_text"
+                app:fabSize="normal" />
 
-                <android.support.design.widget.FloatingActionButton
-                    android:id="@+id/main_text_fab"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:scaleType="center"
-                    android:src="@drawable/ic_main_text"
-                    app:fabSize="normal" />
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/item_divider"
-                    android:text="文本" />
-
-            </LinearLayout>
-
-            <LinearLayout
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/item_three_time_divider"
-                android:layout_marginRight="@dimen/item_three_time_divider"
-                android:gravity="center"
-                android:orientation="vertical">
+                android:layout_marginTop="@dimen/item_divider"
+                android:shadowDx="3"
+                android:shadowColor="@android:color/black"
+                android:shadowRadius="3"
+                android:shadowDy="3"
+                android:text="文本" />
 
-                <android.support.design.widget.FloatingActionButton
-                    android:id="@+id/main_image_fab"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:scaleType="center"
-                    android:src="@drawable/ic_main_image"
-                    app:fabSize="normal" />
+        </LinearLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/item_divider"
-                    android:text="图片" />
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/item_double_divider"
+            android:layout_marginRight="@dimen/item_double_divider"
+            android:gravity="center"
+            android:orientation="vertical">
 
-            </LinearLayout>
-
-            <LinearLayout
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/main_image_fab"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical">
+                android:scaleType="center"
+                android:src="@drawable/ic_main_image"
+                app:fabSize="normal" />
 
-                <android.support.design.widget.FloatingActionButton
-                    android:id="@+id/main_file_fab"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:scaleType="center"
-                    android:src="@drawable/ic_main_file"
-                    app:fabSize="normal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/item_divider"
+                android:text="图片" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/item_divider"
-                    android:text="文件" />
+        </LinearLayout>
 
-            </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
 
-        </android.support.v7.widget.ButtonBarLayout>
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/main_file_fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="center"
+                android:src="@drawable/ic_main_file"
+                app:fabSize="normal" />
 
-    </FrameLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/item_divider"
+                android:text="文件" />
 
+        </LinearLayout>
 
-    <!--<android.support.design.widget.FloatingActionButton-->
-    <!--android:id="@+id/main_cloud_fab"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_marginLeft="@dimen/item_three_time_divider"-->
-    <!--android:layout_marginRight="@dimen/item_three_time_divider"-->
-    <!--android:scaleType="center"-->
-    <!--android:src="@drawable/ic_main_cloud"-->
-    <!--app:fabSize="normal" />-->
+    </android.support.v7.widget.ButtonBarLayout>
 
-    <!--<android.support.design.widget.FloatingActionButton-->
-    <!--android:id="@+id/main_user_fab"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:scaleType="center"-->
-    <!--android:src="@drawable/ic_main_user"-->
-    <!--app:fabSize="normal" />-->
+    <!--<android.support.design.widget.FloatingActionButton--><!--android:id="@+id/main_cloud_fab"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_marginLeft="@dimen/item_three_time_divider"--><!--android:layout_marginRight="@dimen/item_three_time_divider"--><!--android:scaleType="center"--><!--android:src="@drawable/ic_main_cloud"--><!--app:fabSize="normal" />-->
+
+    <!--<android.support.design.widget.FloatingActionButton--><!--android:id="@+id/main_user_fab"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:scaleType="center"--><!--android:src="@drawable/ic_main_user"--><!--app:fabSize="normal" />-->
 
 
 </RelativeLayout>
