@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.oji.kreate.vsf.base.Base_Frag;
 
@@ -26,6 +28,8 @@ public class UploadFragment extends Base_Frag {
     private View bg_scale;
     private View bg_view;
 
+    private TextView switch_tv;
+
     private ScaleAnimation sato0 = new ScaleAnimation(1, 0, 1, 1,
             Animation.RELATIVE_TO_PARENT, 0.1f, Animation.RELATIVE_TO_PARENT, 0.5f);
 
@@ -34,6 +38,15 @@ public class UploadFragment extends Base_Frag {
 
     private ScaleAnimation san0 = new ScaleAnimation(0, 10f, 0, 10f,
             Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+
+
+    //
+    private ScaleAnimation san3 = new ScaleAnimation(1, 1, 1, 0,
+            Animation.RELATIVE_TO_PARENT, 0.1f, Animation.RELATIVE_TO_PARENT, 0.5f);
+
+    private ScaleAnimation san4 = new ScaleAnimation(1, 1, 0, 1,
+            Animation.RELATIVE_TO_PARENT, 0.1f, Animation.RELATIVE_TO_PARENT, 0.5f);
+
 
     @Nullable
     @Override
@@ -76,6 +89,10 @@ public class UploadFragment extends Base_Frag {
     private void showDownloadFab() {
         upload_fab.setVisibility(View.GONE);
         download_fab.setVisibility(View.VISIBLE);
+    }
+
+    private void setupSwitchText() {
+
     }
 
     private void initView(View view) {
@@ -128,12 +145,10 @@ public class UploadFragment extends Base_Frag {
 
                 if (upload_fab.getVisibility() == View.VISIBLE) {
                     upload_fab.clearAnimation();
-//                    upload_fab.setAnimation(null);
                     showDownloadFab();
                     download_fab.startAnimation(sato1);
                 } else {
                     download_fab.clearAnimation();
-//                    download_fab.setAnimation(null);
                     showUploadFab();
                     upload_fab.startAnimation(sato1);
                 }

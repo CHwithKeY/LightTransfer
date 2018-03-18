@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.oji.kreate.lighttransfer.LoginActivity">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/login_logo_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/login_psd_ll"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:src="@drawable/ic_main_lightning"
+        app:fabSize="normal" />
+
+    <LinearLayout
+        android:id="@+id/login_psd_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/login_psd_et0"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="@dimen/item_double_divider"
+            android:layout_marginStart="@dimen/item_double_divider"
+            android:layout_weight="1"
+            android:background="@drawable/dw_transparent_black_fillet"
+            android:gravity="center"
+            android:inputType="numberPassword"
+            android:maxEms="1"
+            android:maxLength="1" />
+
+        <EditText
+            android:id="@+id/login_psd_et1"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="@dimen/item_double_divider"
+            android:layout_marginStart="@dimen/item_double_divider"
+            android:layout_weight="1"
+            android:background="@drawable/dw_transparent_black_fillet"
+            android:gravity="center"
+            android:inputType="numberPassword"
+            android:maxLength="1" />
+
+        <EditText
+            android:id="@+id/login_psd_et2"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="@dimen/item_double_divider"
+            android:layout_marginStart="@dimen/item_double_divider"
+            android:layout_weight="1"
+            android:background="@drawable/dw_transparent_black_fillet"
+            android:gravity="center"
+            android:inputType="numberPassword"
+            android:maxEms="1"
+            android:maxLength="1" />
+
+        <EditText
+            android:id="@+id/login_psd_et3"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="@dimen/item_double_divider"
+            android:layout_marginRight="@dimen/item_double_divider"
+            android:layout_weight="1"
+            android:background="@drawable/dw_transparent_black_fillet"
+            android:gravity="center"
+            android:inputType="numberPassword"
+            android:maxEms="1"
+            android:maxLength="1" />
+    </LinearLayout>
+
+    <include layout="@layout/public_snack_page" />
+
+</RelativeLayout>

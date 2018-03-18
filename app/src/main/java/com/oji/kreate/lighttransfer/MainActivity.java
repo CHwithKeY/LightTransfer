@@ -1,16 +1,22 @@
 package com.oji.kreate.lighttransfer;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.DrawerLayout;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
+import android.view.animation.RotateAnimation;
 import android.view.animation.ScaleAnimation;
 import android.view.animation.TranslateAnimation;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -32,6 +38,10 @@ public class MainActivity extends Base_Act {
     private FloatingActionButton image_fab;
     private FloatingActionButton file_fab;
 
+    private DrawerLayout login_dw;
+
+    private LinearLayout welcome_ll;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,11 +51,18 @@ public class MainActivity extends Base_Act {
 
         setupToolbar();
 
+        setupWelcomeLinear();
+
         setupViewPager();
 
         setupFabInitRebound();
 
         setupMoveTestBtn();
+
+        setupUploadTextFab();
+
+        setupUserImgBtn();
+
     }
 
     @Override
@@ -161,6 +178,16 @@ public class MainActivity extends Base_Act {
         });
     }
 
+    private void setupUploadTextFab() {
+        text_fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent upload_text_int = new Intent(MainActivity.this, UploadTextActivity.class);
+                startActivity(upload_text_int);
+            }
+        });
+    }
+
     private void setupFabInitRebound() {
 
         setupTranslateBottomAnim(text_fab);
@@ -191,6 +218,127 @@ public class MainActivity extends Base_Act {
 //            text_fab.startAnimation(alh0);
 //        }
 //    }
+
+
+    private ImageButton user_imgbtn0;
+    private ImageButton user_imgbtn1;
+
+    private ImageButton setting_imgbtn;
+
+    //
+    private ScaleAnimation san1 = new ScaleAnimation(1, 0, 1, 1,
+            Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+
+    private ScaleAnimation san2 = new ScaleAnimation(0, 1, 1, 1,
+            Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+
+    private void setupUserImgBtn() {
+        user_imgbtn0 = findViewById(R.id.main_user_imgbtn0);
+        user_imgbtn1 = findViewById(R.id.main_user_imgbtn1);
+
+        san1.setDuration(500);
+        san2.setDuration(500);
+//        san1.setRepeatCount(10);
+
+        san1.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                user_imgbtn0.setVisibility(View.INVISIBLE);
+
+                user_imgbtn1.setVisibility(View.VISIBLE);
+                user_imgbtn1.startAnimation(san2);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+
+        san2.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                user_imgbtn1.setVisibility(View.INVISIBLE);
+
+                user_imgbtn0.setVisibility(View.VISIBLE);
+                user_imgbtn0.startAnimation(san1);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+
+        user_imgbtn0.startAnimation(san1);
+
+    }
+
+    private TranslateAnimation tsa0 = new TranslateAnimation(
+            Animation.RELATIVE_TO_PARENT, 0.0f, Animation.RELATIVE_TO_PARENT, 0.0f,
+            Animation.RELATIVE_TO_SELF, -1.0f, Animation.RELATIVE_TO_SELF, 0.0f);
+
+    private TranslateAnimation tsa1 = new TranslateAnimation(
+            Animation.RELATIVE_TO_PARENT, 0.0f, Animation.RELATIVE_TO_PARENT, 0.0f,
+            Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, -1.0f);
+
+    private void setupWelcomeLinear() {
+        welcome_ll = findViewById(R.id.main_welcome_ll);
+
+        tsa0.setDuration(1000);
+        tsa1.setDuration(500);
+
+        tsa0.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                welcome_ll.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        welcome_ll.startAnimation(tsa1);
+                    }
+                }, 1000);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+
+        tsa1.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                welcome_ll.setVisibility(View.GONE);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+
+        welcome_ll.startAnimation(tsa0);
+    }
 
     @Override
     public void onMultiHandleResponse(String s, String s1) throws JSONException {

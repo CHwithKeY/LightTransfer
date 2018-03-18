@@ -11,51 +11,37 @@
         android:id="@+id/main_test_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
         android:text="Move" />
 
-    <!--<TextView-->
-    <!--android:id="@+id/main_notification_tv"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:drawableLeft="@drawable/ic_main_notification"-->
-    <!--android:drawablePadding="@dimen/item_opf_divider"-->
-    <!--android:drawableStart="@drawable/ic_main_notification"-->
-    <!--android:gravity="center_vertical"-->
-    <!--android:padding="@dimen/item_divider"-->
-    <!--android:text="新通知，请留意并查收"-->
-    <!--android:textSize="@dimen/text_large_size" />-->
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/item_divider">
 
-    <!--<LinearLayout-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="60dp"-->
-    <!--android:background="@color/colorAccent"-->
-    <!--android:gravity="center_vertical"-->
-    <!--android:orientation="horizontal">-->
+        <View
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/dw_transparent_black_fillet" />
 
-    <!--<ImageButton-->
-    <!--android:layout_width="40dp"-->
-    <!--android:layout_height="40dp"-->
-    <!--android:layout_marginLeft="@dimen/item_double_divider"-->
-    <!--android:layout_marginStart="@dimen/item_double_divider"-->
-    <!--android:background="@drawable/dw_assist_circle"-->
-    <!--android:scaleType="centerInside"-->
-    <!--android:src="@drawable/ic_main_user" />-->
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/main_user_imgbtn0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_main_user" />
 
-    <!--</LinearLayout>-->
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/main_user_imgbtn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_main_user"
+            android:visibility="invisible" />
 
-    <!--<ImageView-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_alignParentEnd="true"-->
-    <!--android:layout_alignParentRight="true"-->
-    <!--android:layout_margin="@dimen/item_double_divider"-->
-    <!--android:src="@drawable/ic_main_user" />-->
-
-    <!--<android.support.design.widget.TabLayout-->
-    <!--android:id="@+id/main_function_tab"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="40dp"-->
-    <!--android:layout_marginTop="@dimen/item_divider" />-->
+    </FrameLayout>
 
     <View
         android:layout_width="80dp"
@@ -97,10 +83,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/item_divider"
-                android:shadowDx="3"
                 android:shadowColor="@android:color/black"
-                android:shadowRadius="3"
+                android:shadowDx="3"
                 android:shadowDy="3"
+                android:shadowRadius="3"
                 android:text="文本" />
 
         </LinearLayout>
@@ -153,9 +139,64 @@
 
     </android.support.v7.widget.ButtonBarLayout>
 
-    <!--<android.support.design.widget.FloatingActionButton--><!--android:id="@+id/main_cloud_fab"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_marginLeft="@dimen/item_three_time_divider"--><!--android:layout_marginRight="@dimen/item_three_time_divider"--><!--android:scaleType="center"--><!--android:src="@drawable/ic_main_cloud"--><!--app:fabSize="normal" />-->
+    <LinearLayout
+        android:id="@+id/main_welcome_ll"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/colorLandLight"
+        android:gravity="center"
+        android:orientation="horizontal">
 
-    <!--<android.support.design.widget.FloatingActionButton--><!--android:id="@+id/main_user_fab"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:scaleType="center"--><!--android:src="@drawable/ic_main_user"--><!--app:fabSize="normal" />-->
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/image_main_avatar_man" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/item_double_divider"
+            android:text="欢迎用户XXXX登录"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_x_large_size"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!--  -->
+    <!--<android.support.v4.widget.DrawerLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignParentBottom="true">-->
+
+    <!--<FrameLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent" />-->
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="250dp"-->
+    <!--android:layout_gravity="bottom|end"-->
+    <!--android:layout_marginEnd="-65dp"-->
+    <!--android:layout_marginRight="-65dp"-->
+    <!--android:background="@android:color/white">-->
+
+    <!--<android.support.design.widget.TextInputLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:gravity="center">-->
+
+    <!--<android.support.design.widget.TextInputEditText-->
+    <!--android:layout_width="150dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:hint="UserName" />-->
+
+    <!--</android.support.design.widget.TextInputLayout>-->
+
+    <!--</RelativeLayout>-->
+
+    <!--</android.support.v4.widget.DrawerLayout>-->
 
 </RelativeLayout>
+
