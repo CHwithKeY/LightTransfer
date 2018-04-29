@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
@@ -7,5 +7,19 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
+    <style name="login_more_tv_style">
+        <item name="android:layout_width">90dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_alignEnd">@id/login_more_imgbtn</item>
+        <item name="android:layout_marginBottom">@dimen/item_divider</item>
+        <item name="android:layout_marginEnd">@dimen/item_three_time_divider</item>
+        <item name="android:background">@drawable/dw_land_ws_fillet</item>
+        <item name="android:elevation" tools:targetApi="lollipop">4dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
 
 </resources>

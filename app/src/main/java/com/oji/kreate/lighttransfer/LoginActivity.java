@@ -9,7 +9,16 @@ import android.text.TextWatcher;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.animation.AccelerateDecelerateInterpolator;
+import android.view.animation.AccelerateInterpolator;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.view.animation.ScaleAnimation;
+import android.view.animation.TranslateAnimation;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.oji.kreate.vsf.base.Base_Act;
@@ -24,6 +33,10 @@ public class LoginActivity extends Base_Act {
     private EditText psd_et2;
     private EditText psd_et3;
 
+    private LinearLayout welcome_ll;
+
+    private TextView forget_psd_tv;
+    private TextView switch_usn_tv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,21 +49,28 @@ public class LoginActivity extends Base_Act {
 
         setupPsdEdit();
 
+        setupWelcomeLinear();
 
+        setupMoreImgBtn();
+
+        setupCollapseIME();
     }
 
     @Override
     public void varInit() {
 
+        forget_psd_tv = findViewById(R.id.login_forget_psd_tv);
+        switch_usn_tv = findViewById(R.id.login_switch_usn_tv);
+
     }
 
     @Override
-    protected void setupToolbar() {
+    protected void setupToolbar() {    }
 
-    }
 
     private void setupPsdEdit() {
         psd_et0 = findViewById(R.id.login_psd_et0);
+
         psd_et1 = findViewById(R.id.login_psd_et1);
         psd_et2 = findViewById(R.id.login_psd_et2);
         psd_et3 = findViewById(R.id.login_psd_et3);
@@ -133,7 +153,128 @@ public class LoginActivity extends Base_Act {
                 }
             }
         });
+    }
 
+//    private TranslateAnimation tsa0 = new TranslateAnimation(
+//            Animation.RELATIVE_TO_PARENT, 0.0f, Animation.RELATIVE_TO_PARENT, 0.0f,
+//            Animation.RELATIVE_TO_SELF, -1.0f, Animation.RELATIVE_TO_SELF, 0.0f);
+//
+//    private TranslateAnimation tsa1 = new TranslateAnimation(
+//            Animation.RELATIVE_TO_PARENT, 0.0f, Animation.RELATIVE_TO_PARENT, 0.0f,
+//            Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, -2.0f);
+
+    private void setupWelcomeLinear() {
+        welcome_ll = findViewById(R.id.login_welcome_ll);
+
+        Animation move_anim = AnimationUtils.loadAnimation(LoginActivity.this, R.anim.anim_view_move);
+        move_anim.setInterpolator(new AccelerateDecelerateInterpolator());
+        welcome_ll.startAnimation(move_anim);
+        move_anim.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                welcome_ll.setVisibility(View.GONE);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+
+//        tsa0.setDuration(1000);
+//        tsa1.setDuration(300);
+//
+//        tsa0.setAnimationListener(new Animation.AnimationListener() {
+//            @Override
+//            public void onAnimationStart(Animation animation) {
+//
+//            }
+//
+//            @Override
+//            public void onAnimationEnd(Animation animation) {
+//                welcome_ll.postDelayed(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        welcome_ll.startAnimation(tsa1);
+//                    }
+//                }, 1500);
+//            }
+//
+//            @Override
+//            public void onAnimationRepeat(Animation animation) {
+//
+//            }
+//        });
+//
+//        tsa1.setAnimationListener(new Animation.AnimationListener() {
+//            @Override
+//            public void onAnimationStart(Animation animation) {
+//
+//            }
+//
+//            @Override
+//            public void onAnimationEnd(Animation animation) {
+//                welcome_ll.setVisibility(View.GONE);
+//            }
+//
+//            @Override
+//            public void onAnimationRepeat(Animation animation) {
+//
+//            }
+//        });
+//
+//        welcome_ll.startAnimation(tsa0);
+    }
+
+    private boolean showMore = false;
+
+    private void setupMoreImgBtn() {
+        final ImageButton more_imgbtn = findViewById(R.id.login_more_imgbtn);
+        more_imgbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!showMore) {
+                    showMoreText();
+                } else {
+                    hideMoreText();
+                }
+            }
+        });
+    }
+
+    private void showMoreText() {
+        showMore = true;
+
+        forget_psd_tv.setVisibility(View.VISIBLE);
+        forget_psd_tv.startAnimation(AnimationUtil.becomeLarge());
+
+        switch_usn_tv.setVisibility(View.VISIBLE);
+        switch_usn_tv.startAnimation(AnimationUtil.becomeLarge());
+    }
+
+    private void hideMoreText() {
+        showMore = false;
+
+        forget_psd_tv.setVisibility(View.GONE);
+        forget_psd_tv.startAnimation(AnimationUtil.becomeSmall());
+
+        switch_usn_tv.setVisibility(View.GONE);
+        switch_usn_tv.startAnimation(AnimationUtil.becomeSmall());
+    }
+
+    private void setupCollapseIME() {
+        final RelativeLayout login_rl = findViewById(R.id.login_layout);
+        login_rl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Methods.collapseIME(LoginActivity.this);
+            }
+        });
     }
 
     @Override

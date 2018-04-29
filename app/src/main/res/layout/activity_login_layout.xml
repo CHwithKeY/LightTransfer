@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.oji.kreate.lighttransfer.LoginActivity">
@@ -12,9 +13,36 @@
         android:layout_height="wrap_content"
         android:layout_above="@id/login_psd_ll"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="@dimen/item_three_time_divider"
         android:src="@drawable/ic_main_lightning"
         app:fabSize="normal" />
+
+    <LinearLayout
+        android:id="@+id/login_welcome_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/item_three_time_divider"
+        android:layout_marginTop="@dimen/item_divider"
+        android:background="@drawable/dw_land_ws_fillet"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="@dimen/item_divider"
+            android:src="@drawable/image_main_avatar_man" />
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="欢迎：XXX"
+            android:textColor="@color/colorAvatarBackground"
+            android:textStyle="bold" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/login_psd_ll"
@@ -74,6 +102,61 @@
             android:maxEms="1"
             android:maxLength="1" />
     </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/item_double_divider">
+
+        <ImageButton
+            android:id="@+id/login_more_imgbtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/item_half_divider"
+            android:background="@drawable/dw_accent_full_circle"
+            android:elevation="4dp"
+            android:src="@drawable/ic_login_more" />
+
+        <ImageView
+            android:id="@+id/login_forget_psd_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/login_more_imgbtn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/item_opf_divider"
+            android:src="@drawable/ic_login_forget_psd" />
+
+        <ImageView
+            android:id="@+id/login_switch_usn_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/login_forget_psd_img"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/item_opf_divider"
+            android:src="@drawable/ic_login_switch_usn" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/login_forget_psd_tv"
+        style="@style/login_more_tv_style"
+        android:layout_alignBottom="@+id/relativeLayout2"
+        android:layout_marginBottom="38dp"
+        android:layout_marginStart="16dp"
+        android:layout_toEndOf="@+id/login_logo_fab"
+        android:text="忘记密码" />
+
+    <TextView
+        android:id="@+id/login_switch_usn_tv"
+        style="@style/login_more_tv_style"
+        android:layout_above="@+id/login_forget_psd_tv"
+        android:layout_alignStart="@+id/login_forget_psd_tv"
+        android:text="切换账户" />
 
     <include layout="@layout/public_snack_page" />
 

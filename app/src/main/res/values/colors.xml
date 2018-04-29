@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#787777</color>
 
+    <color name="colorAccentLight">#8e8d8d</color>
 
     <color name="colorBackground">#ffe837</color>
     <color name="colorAssist">#99CCFF</color>
@@ -14,6 +15,11 @@
     <color name="colorWhiteTransparent">#fafafa</color>
     <color name="colorLand">#663300</color>
     <color name="colorLandLight">#a15001</color>
+    <color name="colorLandPale">#efda7717</color>
+
+    <color name="colorAvatarBackground">#022939</color>
+
+
     <color name="colorBlueDark">#0c3a80</color>
 
 

@@ -42,7 +42,6 @@ public class UploadTextActivity extends Base_Act {
 
     @Override
     public void varInit() {
-
         nav_bg = findViewById(R.id.nav_bg);
     }
 
@@ -80,7 +79,6 @@ public class UploadTextActivity extends Base_Act {
 
             }
         });
-
     }
 
 //    private View.OnTouchListener shopCarSettleTouch = new View.OnTouchListener() {
