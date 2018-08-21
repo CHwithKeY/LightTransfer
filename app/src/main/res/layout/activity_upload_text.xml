@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/upload_text_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/ut_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground">
+
+        <LinearLayout
+            android:id="@+id/ut_drawer_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/item_five_time_divider"
+            android:orientation="vertical">
+
+            <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="75dp"-->
+            <!--android:layout_marginTop="@dimen/item_divider"-->
+            <!--android:gravity="center"-->
+            <!--android:text="上传内容"-->
+            <!--android:textColor="@color/colorAccent"-->
+            <!--android:textSize="@dimen/text_xx_large_size"-->
+            <!--android:textStyle="bold" />-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginEnd="@dimen/item_three_time_divider"
+                android:layout_marginStart="@dimen/item_three_time_divider"
+                android:layout_weight="0.9"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <ScrollView
+                    android:id="@+id/ut_prepare_sv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@id/ut_prepare_bl"
+                    android:fillViewport="true">
+
+                    <EditText
+                        android:id="@+id/ut_prepare_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:gravity="start|top"
+                        android:hint="输入要上传的内容"
+                        android:inputType="textMultiLine"
+                        android:padding="@dimen/item_double_divider"
+                        android:textSize="@dimen/text_middle_size" />
+
+                </ScrollView>
+
+                <android.support.v7.widget.ButtonBarLayout
+                    android:id="@+id/ut_prepare_bl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/colorLightGray"
+                    android:gravity="end|center_vertical"
+                    android:orientation="horizontal">
+
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/ut_review_fab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/item_divider"
+                        android:layout_marginEnd="@dimen/item_double_divider"
+                        android:layout_marginTop="@dimen/item_divider"
+                        android:src="@drawable/ic_ut_review"
+                        app:fabSize="mini" />
+
+                    <ImageView
+                        android:id="@+id/ut_transfer_img"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="@dimen/item_double_divider"
+                        android:background="@drawable/dw_circle_assist_none"
+                        android:elevation="5dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_ut_lightning" />
+
+                </android.support.v7.widget.ButtonBarLayout>
+
+                <!--<Button-->
+                <!--android:id="@+id/ut_review_btn"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:background="@color/colorAssist"-->
+                <!--android:text="Review" />-->
+
+                <!--<Button-->
+                <!--android:id="@+id/ut_transfer_btn"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:background="@color/colorBackground"-->
+                <!--android:text="Transfer"-->
+                <!--android:textColor="@android:color/white" />-->
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/item_double_divider"
+                android:layout_weight="0.3"
+                android:background="@android:color/white"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content">
+
+                            <ImageButton
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerInParent="true"
+                                android:background="@drawable/dw_circle_assist_none"
+                                android:scaleType="center"
+                                android:src="@drawable/ic_ut_nav_clipboard" />
+
+                            <TextView
+                                android:layout_width="5dp"
+                                android:layout_height="15dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:background="@color/colorBackground" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="50dp"
+                            android:layout_marginTop="@dimen/item_double_divider"
+                            android:layout_height="wrap_content">
+
+                            <ImageButton
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerInParent="true"
+                                android:background="@drawable/dw_circle_lightgray_none"
+                                android:scaleType="center"
+                                android:src="@drawable/ic_ut_multiboard_cloud" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <RelativeLayout
+                    android:background="@color/colorLightGray"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/ut_multiboard_vp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/item_half_divider"
+                        android:layout_marginTop="@dimen/item_divider" />
+
+                    <LinearLayout
+                        android:id="@+id/ut_multiboard_pointer_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:id="@+id/ut_multiboard_pointer_view"
+                            android:layout_width="5dp"
+                            android:layout_height="5dp"
+                            android:layout_marginEnd="@dimen/item_half_divider"
+                            android:layout_marginStart="@dimen/item_half_divider"
+                            android:background="@drawable/dw_circle_background_none"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:background="@color/colorLightGray"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/ut_nav_file_imgbtn"
+                style="@style/upload_text_nav_imgbtn_style"
+                android:src="@drawable/ic_main_file" />
+
+            <ImageButton
+                android:id="@+id/ut_nav_image_imgbtn"
+                style="@style/upload_text_nav_imgbtn_style"
+                android:layout_marginTop="@dimen/item_three_time_divider"
+                android:src="@drawable/ic_main_image" />
+
+            <FrameLayout
+                android:id="@+id/ut_nav_divider_fl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/item_three_time_divider">
+
+                <include layout="@layout/item_divider_horizontal" />
+
+            </FrameLayout>
+
+            <ImageButton
+                android:id="@+id/ut_nav_draft_imgbtn"
+                style="@style/upload_text_nav_imgbtn_style"
+                android:src="@drawable/ic_ut_nav_draft" />
+
+            <ImageButton
+                android:id="@+id/ut_nav_clipboard_imgbtn"
+                style="@style/upload_text_nav_imgbtn_style"
+                android:layout_marginTop="@dimen/item_three_time_divider"
+                android:src="@drawable/ic_ut_nav_clipboard" />
+
+            <ImageButton
+                android:id="@+id/ut_nav_upload_imgbtn"
+                style="@style/upload_text_nav_imgbtn_style"
+                android:layout_marginTop="@dimen/item_three_time_divider"
+                android:src="@drawable/ic_main_lightning" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.DrawerLayout>
+
+    <TextView
+        android:id="@+id/ut_nav_expand"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="-45dp"
+        android:background="@drawable/dw_circle_accent_none"
+        android:elevation="7dp"
+        android:gravity="center"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/ut_shadow_view"
+        android:layout_width="match_parent"
+        android:alpha="0.6"
+        android:background="@android:color/black"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/fgm_ut_multiboard_pad_rl"
+        android:layout_width="250dp"
+        android:layout_height="400dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/dw_quartercirlce_background_none"
+        android:visibility="gone">
+
+        <!--<ImageButton-->
+        <!--android:id="@+id/ut_multiboard_pad_lightning"-->
+        <!--android:layout_width="70dp"-->
+        <!--android:layout_height="70dp"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_margin="@dimen/item_three_time_divider"-->
+        <!--android:background="@android:color/transparent"-->
+        <!--android:scaleType="centerCrop"-->
+        <!--android:src="@drawable/ic_multipad_lightning" />-->
+
+        <ImageButton
+            android:id="@+id/ut_back_step_imgbtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="75dp"
+            android:layout_marginEnd="@dimen/item_double_divider"
+            android:background="@android:color/transparent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_ut_back_step" />
+
+        <ImageButton
+            android:id="@+id/ut_override_imgbtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="@dimen/item_double_divider"
+            android:layout_marginEnd="75dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_ut_override" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/public_snack_page" />
+
+</RelativeLayout>

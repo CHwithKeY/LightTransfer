@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <layer-list>
+            <item>
+                <rotate android:fromDegrees="15" android:pivotX="0%" android:pivotY="0%">
+                    <shape android:shape="rectangle">
+                        <gradient android:angle="90" android:endColor="@android:color/transparent" android:startColor="@android:color/black" />
+                    </shape>
+                </rotate>
+            </item>
+
+            <!--<item>-->
+                <!--<rotate android:fromDegrees="15" android:pivotX="-15%" android:pivotY="100%">-->
+                    <!--<shape android:shape="rectangle">-->
+                        <!--<gradient android:angle="90" android:endColor="@android:color/transparent" android:startColor="@android:color/black" />-->
+                        <!--<size android:width="25dp" android:height="100dp" />-->
+                    <!--</shape>-->
+                <!--</rotate>-->
+            <!--</item>-->
+
+        </layer-list>
+
+    </item>
+
+</selector>

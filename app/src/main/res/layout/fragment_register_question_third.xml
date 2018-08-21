@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fgm_rqt_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/fgm_rqt_bg_fst_view"
+        android:layout_width="350dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="@dimen/item_double_divider"
+        android:alpha="0.3"
+        android:background="@color/colorAssist"
+        android:rotation="60" />
+
+    <View
+        android:id="@+id/fgm_rqt_bg_snd_view"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="75dp"
+        android:layout_marginStart="@dimen/item_five_time_divider"
+        android:alpha="0.4"
+        android:background="@color/colorBackground"
+        android:rotation="150" />
+
+    <include
+        android:id="@+id/fgm_rqt_title_ll"
+        layout="@layout/item_layout_title" />
+
+    <RadioGroup
+        android:id="@+id/fgm_rqt_question_rbg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/fgm_rqt_answer_et"
+        android:layout_below="@id/fgm_rqt_title_ll"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/item_double_divider"
+        android:layout_marginTop="@dimen/item_five_time_divider">
+
+        <RadioButton
+            android:id="@+id/fgm_rqt_question_fst_rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="你最不喜欢的明星是？"
+            android:textSize="@dimen/text_x_large_size" />
+
+        <RadioButton
+            android:id="@+id/fgm_rqt_question_snd_rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_double_divider"
+            android:text="你最喜欢的电影是？"
+            android:textSize="@dimen/text_x_large_size" />
+
+        <RadioButton
+            android:id="@+id/fgm_rqt_question_thd_rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_double_divider"
+            android:text="你最想要的超能力是？"
+            android:textSize="@dimen/text_x_large_size" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/fgm_rqt_answer_et"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/fgm_rqt_question_rbg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/item_three_time_divider"
+        android:background="@drawable/dw_square_white_accent"
+        android:gravity="center"
+        android:hint="请输入您的答案" />
+
+    <include layout="@layout/item_prev_step" />
+
+    <include layout="@layout/item_next_step" />
+
+</RelativeLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/item_double_divider">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAssist"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/recycler_bdi_time_tv"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:paddingEnd="@dimen/item_double_divider"
+                android:paddingStart="@dimen/item_double_divider"
+                android:text="2018-06-30 00:42:19" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recycler_bdi_time_tv"
+                app:cardElevation="7dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/recycler_bdi_text_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_marginBottom="@dimen/item_half_divider"
+                        android:layout_marginTop="@dimen/item_divider"
+                        android:ellipsize="middle"
+                        android:maxLines="4"
+                        android:paddingBottom="@dimen/item_half_divider"
+                        android:paddingEnd="@dimen/item_double_divider"
+                        android:paddingStart="@dimen/item_double_divider"
+                        android:paddingTop="@dimen/item_half_divider"
+                        android:text="的大幅度的说法的身份阿三打分卡六发动机是喀拉喀什角动量开发接口的撒啊但是啊a的大幅度的说法的身份阿三的撒啊但是啊a的大幅度的说法的身份阿三的撒啊但是啊a的大幅度的说法的身份阿三的撒啊但是啊a的大幅度的说法的身份阿三的撒啊但是啊a" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginEnd="@dimen/item_double_divider"
+                        android:layout_marginStart="@dimen/item_double_divider"
+                        android:background="@color/colorLightGray" />
+
+                    <LinearLayout
+                        android:id="@+id/recycler_bdi_tag_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:orientation="horizontal"
+                        android:paddingEnd="@dimen/item_double_divider"
+                        android:paddingStart="@dimen/item_divider">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_margin="@dimen/item_divider"
+                            android:background="@drawable/dw_transparent_black_fillet"
+                            android:gravity="center"
+                            android:paddingEnd="@dimen/item_divider"
+                            android:paddingStart="@dimen/item_divider"
+                            android:text="重要" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_margin="@dimen/item_divider"
+                            android:background="@drawable/dw_fillet_white_gray"
+                            android:gravity="center"
+                            android:paddingEnd="@dimen/item_divider"
+                            android:paddingStart="@dimen/item_divider"
+                            android:text="较紧急" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_margin="@dimen/item_divider"
+                            android:background="@drawable/dw_transparent_black_fillet"
+                            android:gravity="center"
+                            android:paddingEnd="@dimen/item_divider"
+                            android:paddingStart="@dimen/item_divider"
+                            android:text="工作刘总" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

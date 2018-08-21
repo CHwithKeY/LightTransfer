@@ -12,53 +12,19 @@
         android:text="上传"
         android:textSize="@dimen/text_large_size" />
 
-    <!--<android.support.v7.widget.ButtonBarLayout-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_gravity="end"-->
-    <!--android:layout_margin="@dimen/item_double_divider">-->
-
-
-    <!--<FrameLayout-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content">-->
-
-    <!--<View-->
-    <!--android:layout_width="30dp"-->
-    <!--android:layout_height="30dp"-->
-    <!--android:background="@drawable/dw_transparent_black_fillet" />-->
-
-    <!--<ImageButton-->
-    <!--android:id="@+id/main_setting_imgbtn"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_gravity="center"-->
-    <!--android:background="@android:color/transparent"-->
-    <!--android:src="@drawable/ic_main_setting" />-->
-
-    <!--</FrameLayout>-->
-
-    <!--</android.support.v7.widget.ButtonBarLayout>-->
-
     <View
         android:id="@+id/main_upload_bg"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_gravity="center"
-        android:background="@drawable/dw_land_circle" />
+        android:background="@drawable/dw_circle_main_none" />
 
     <View
         android:id="@+id/main_scale_bg"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_gravity="center"
-        android:background="@drawable/dw_assist_dark_circle" />
-
-    <!--<View-->
-    <!--android:layout_width="20dp"-->
-    <!--android:layout_height="20dp"-->
-    <!--android:layout_gravity="center"-->
-    <!--android:background="@drawable/dw_assist_circle" />-->
+        android:background="@drawable/dw_circle_main_none" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/main_download_fab"
@@ -84,6 +50,5 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:text="test" />
-
 
 </FrameLayout>

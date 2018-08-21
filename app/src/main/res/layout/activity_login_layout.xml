@@ -1,21 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/login_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.oji.kreate.lighttransfer.LoginActivity">
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/login_logo_fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/login_psd_ll"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="@dimen/item_three_time_divider"
-        android:src="@drawable/ic_main_lightning"
-        app:fabSize="normal" />
+    <ImageView
+        android:id="@+id/login_bg_fst_img"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="-100dp"
+        android:layout_marginTop="-150dp"
+        android:background="@drawable/dw_rectangle_background_none"
+        android:rotation="45" />
+
+    <ImageView
+        android:id="@+id/login_bg_snd_img"
+        android:layout_width="300dp"
+        android:layout_height="350dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="-150dp"
+        android:alpha="0.7"
+        android:background="@drawable/dw_rectangle_background_none"
+        android:rotation="45" />
+
+    <ImageView
+        android:id="@+id/login_bg_thd_img"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-150dp"
+        android:layout_marginStart="-150dp"
+        android:alpha="0.8"
+        android:background="@drawable/dw_rectangle_background_none"
+        android:rotation="45" />
 
     <LinearLayout
         android:id="@+id/login_welcome_ll"
@@ -25,7 +45,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="@dimen/item_three_time_divider"
         android:layout_marginTop="@dimen/item_divider"
-        android:background="@drawable/dw_land_ws_fillet"
+        android:background="@drawable/dw_fillet_landpale_land"
         android:orientation="horizontal">
 
         <ImageView
@@ -44,111 +64,50 @@
 
     </LinearLayout>
 
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true">-->
+
+    <!--<EditText-->
+    <!--android:id="@+id/login_passkey_et"-->
+    <!--android:layout_width="250dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:background="@drawable/dw_square_white_accent"-->
+    <!--android:gravity="center"-->
+    <!--android:hint="请输入通行码" />-->
+
     <LinearLayout
-        android:id="@+id/login_psd_ll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:orientation="horizontal">
+        android:gravity="center"
+        android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/login_psd_et0"
-            android:layout_width="0dp"
-            android:layout_height="75dp"
-            android:layout_marginLeft="@dimen/item_double_divider"
-            android:layout_marginStart="@dimen/item_double_divider"
-            android:layout_weight="1"
-            android:background="@drawable/dw_transparent_black_fillet"
-            android:gravity="center"
-            android:inputType="numberPassword"
-            android:maxEms="1"
-            android:maxLength="1" />
+        <include layout="@layout/item_input" />
 
-        <EditText
-            android:id="@+id/login_psd_et1"
-            android:layout_width="0dp"
-            android:layout_height="75dp"
-            android:layout_marginLeft="@dimen/item_double_divider"
-            android:layout_marginStart="@dimen/item_double_divider"
-            android:layout_weight="1"
-            android:background="@drawable/dw_transparent_black_fillet"
-            android:gravity="center"
-            android:inputType="numberPassword"
-            android:maxLength="1" />
+        <include layout="@layout/item_tips" />
 
-        <EditText
-            android:id="@+id/login_psd_et2"
-            android:layout_width="0dp"
-            android:layout_height="75dp"
-            android:layout_marginLeft="@dimen/item_double_divider"
-            android:layout_marginStart="@dimen/item_double_divider"
-            android:layout_weight="1"
-            android:background="@drawable/dw_transparent_black_fillet"
-            android:gravity="center"
-            android:inputType="numberPassword"
-            android:maxEms="1"
-            android:maxLength="1" />
-
-        <EditText
-            android:id="@+id/login_psd_et3"
-            android:layout_width="0dp"
-            android:layout_height="75dp"
-            android:layout_marginLeft="@dimen/item_double_divider"
-            android:layout_marginRight="@dimen/item_double_divider"
-            android:layout_weight="1"
-            android:background="@drawable/dw_transparent_black_fillet"
-            android:gravity="center"
-            android:inputType="numberPassword"
-            android:maxEms="1"
-            android:maxLength="1" />
     </LinearLayout>
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout2"
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/login_help_fab"
         android:layout_width="wrap_content"
-        android:layout_height="150dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_margin="@dimen/item_double_divider">
-
-        <ImageButton
-            android:id="@+id/login_more_imgbtn"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="@dimen/item_half_divider"
-            android:background="@drawable/dw_accent_full_circle"
-            android:elevation="4dp"
-            android:src="@drawable/ic_login_more" />
-
-        <ImageView
-            android:id="@+id/login_forget_psd_img"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@id/login_more_imgbtn"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="@dimen/item_opf_divider"
-            android:src="@drawable/ic_login_forget_psd" />
-
-        <ImageView
-            android:id="@+id/login_switch_usn_img"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@id/login_forget_psd_img"
-            android:layout_centerInParent="true"
-            android:layout_marginBottom="@dimen/item_opf_divider"
-            android:src="@drawable/ic_login_switch_usn" />
-
-
-    </RelativeLayout>
+        android:layout_alignParentStart="true"
+        android:layout_margin="@dimen/item_double_divider"
+        android:scaleType="center"
+        android:src="@drawable/ic_public_help"
+        app:fabSize="mini" />
 
     <TextView
         android:id="@+id/login_forget_psd_tv"
+        android:layout_above="@id/login_help_fab"
+        android:layout_marginStart="@dimen/item_double_divider"
+        android:visibility="gone"
         style="@style/login_more_tv_style"
-        android:layout_alignBottom="@+id/relativeLayout2"
-        android:layout_marginBottom="38dp"
-        android:layout_marginStart="16dp"
-        android:layout_toEndOf="@+id/login_logo_fab"
         android:text="忘记密码" />
 
     <TextView
@@ -156,7 +115,46 @@
         style="@style/login_more_tv_style"
         android:layout_above="@+id/login_forget_psd_tv"
         android:layout_alignStart="@+id/login_forget_psd_tv"
+        android:layout_marginBottom="@dimen/item_divider"
+        android:visibility="gone"
         android:text="切换账户" />
+
+    <include layout="@layout/item_next_step" />
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/relativeLayout2"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="150dp"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:layout_margin="@dimen/item_double_divider">-->
+
+    <!--<ImageButton-->
+    <!--android:id="@+id/login_more_imgbtn"-->
+    <!--android:layout_width="30dp"-->
+    <!--android:layout_height="30dp"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_marginBottom="@dimen/item_half_divider"-->
+    <!--android:background="@drawable/dw_btn_circle_accent_none"-->
+    <!--android:elevation="4dp"-->
+    <!--android:src="@drawable/ic_login_more" />-->
+
+    <!--</RelativeLayout>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/login_forget_psd_tv"-->
+    <!--style="@style/login_more_tv_style"-->
+    <!--android:layout_alignBottom="@+id/relativeLayout2"-->
+    <!--android:layout_marginBottom="38dp"-->
+    <!--android:layout_marginStart="16dp"-->
+    <!--android:text="忘记密码" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/login_switch_usn_tv"-->
+    <!--style="@style/login_more_tv_style"-->
+    <!--android:layout_above="@+id/login_forget_psd_tv"-->
+    <!--android:layout_alignStart="@+id/login_forget_psd_tv"-->
+    <!--android:text="切换账户" />-->
 
     <include layout="@layout/public_snack_page" />
 

@@ -28,8 +28,6 @@ public class UploadFragment extends Base_Frag {
     private View bg_scale;
     private View bg_view;
 
-    private TextView switch_tv;
-
     private ScaleAnimation sato0 = new ScaleAnimation(1, 0, 1, 1,
             Animation.RELATIVE_TO_PARENT, 0.1f, Animation.RELATIVE_TO_PARENT, 0.5f);
 
@@ -38,15 +36,6 @@ public class UploadFragment extends Base_Frag {
 
     private ScaleAnimation san0 = new ScaleAnimation(0, 10f, 0, 10f,
             Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
-
-
-    //
-    private ScaleAnimation san3 = new ScaleAnimation(1, 1, 1, 0,
-            Animation.RELATIVE_TO_PARENT, 0.1f, Animation.RELATIVE_TO_PARENT, 0.5f);
-
-    private ScaleAnimation san4 = new ScaleAnimation(1, 1, 0, 1,
-            Animation.RELATIVE_TO_PARENT, 0.1f, Animation.RELATIVE_TO_PARENT, 0.5f);
-
 
     @Nullable
     @Override
@@ -91,10 +80,6 @@ public class UploadFragment extends Base_Frag {
         download_fab.setVisibility(View.VISIBLE);
     }
 
-    private void setupSwitchText() {
-
-    }
-
     private void initView(View view) {
         upload_fab = view.findViewById(R.id.main_upload_fab);
         download_fab = view.findViewById(R.id.main_download_fab);
@@ -120,11 +105,11 @@ public class UploadFragment extends Base_Frag {
                 bg_scale.clearAnimation();
 
                 if (upload_fab.getVisibility() == View.VISIBLE) {
-                    bg_scale.setBackgroundDrawable(getResources().getDrawable(R.drawable.dw_assist_circle));
-                    bg_view.setBackgroundDrawable(getResources().getDrawable(R.drawable.dw_land_circle));
+                    bg_scale.setBackgroundDrawable(getResources().getDrawable(R.drawable.dw_circle_assist_none));
+                    bg_view.setBackgroundDrawable(getResources().getDrawable(R.drawable.dw_circle_landpale_none));
                 } else {
-                    bg_scale.setBackgroundDrawable(getResources().getDrawable(R.drawable.dw_land_circle));
-                    bg_view.setBackgroundDrawable(getResources().getDrawable(R.drawable.dw_assist_circle));
+                    bg_scale.setBackgroundDrawable(getResources().getDrawable(R.drawable.dw_circle_landpale_none));
+                    bg_view.setBackgroundDrawable(getResources().getDrawable(R.drawable.dw_circle_assist_none));
                 }
             }
 

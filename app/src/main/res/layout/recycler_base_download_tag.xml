@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center_vertical">
+
+    <Button
+        android:id="@+id/recycler_bdt_tag_btn"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="@dimen/item_divider"
+        android:layout_marginStart="@dimen/item_divider"
+        android:background="@drawable/dw_fillet_white_gray"
+        android:text="重要"
+        android:textColor="@color/colorBackground" />
+
+</RelativeLayout>

@@ -2,25 +2,28 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#787777</color>
+    <color name="colorAccent">#013B63</color>
 
-    <color name="colorAccentLight">#8e8d8d</color>
+    <color name="colorAccentLight">#016db7</color>
 
-    <color name="colorBackground">#ffe837</color>
-    <color name="colorAssist">#99CCFF</color>
-    <color name="colorAssistDark">#7fb8f1</color>
-    <color name="colorMain">#FF6666</color>
+    <color name="colorBackground">#013B63</color>
+    <color name="colorAssist">#9fbeff</color>
+    <color name="colorMain">#feb75d</color>
 
     <color name="colorLightGray">#ddd</color>
     <color name="colorWhiteTransparent">#fafafa</color>
     <color name="colorLand">#663300</color>
     <color name="colorLandLight">#a15001</color>
-    <color name="colorLandPale">#efda7717</color>
+    <color name="colorLandPale">#effda652</color>
 
     <color name="colorAvatarBackground">#022939</color>
 
+    <color name="colorTestBackground">#f3cd05</color>
+    <color name="colorTestBackgroundPale">#f1d962</color>
+    <color name="colorTestBackgroundLight">#f49f05</color>
+    <color name="colorTestAssist">#36688d</color>
+    <color name="colorTestAssistPale">#66acdf</color>
 
-    <color name="colorBlueDark">#0c3a80</color>
-
+    <color name="colorTestGreen">#0ff923</color>
 
 </resources>

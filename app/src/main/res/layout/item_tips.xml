@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_tips_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:drawablePadding="@dimen/item_divider"
+    android:drawableStart="@drawable/ic_public_tips"
+    android:gravity="center_vertical"
+    android:paddingBottom="@dimen/item_divider"
+    android:paddingTop="@dimen/item_divider"
+    android:text="请输入用于登录/注册的通行码"
+    android:textSize="@dimen/text_middle_size" />

@@ -6,19 +6,70 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowTranslucentStatus" tools:targetApi="kitkat">true</item>
     </style>
 
-    <style name="login_more_tv_style">
-        <item name="android:layout_width">90dp</item>
-        <item name="android:layout_height">40dp</item>
-        <item name="android:layout_alignEnd">@id/login_more_imgbtn</item>
-        <item name="android:layout_marginBottom">@dimen/item_divider</item>
-        <item name="android:layout_marginEnd">@dimen/item_three_time_divider</item>
-        <item name="android:background">@drawable/dw_land_ws_fillet</item>
-        <item name="android:elevation" tools:targetApi="lollipop">4dp</item>
+
+    <!-- main -->
+    <style name="main_upload_type_linear_style">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:gravity">center</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@android:color/white</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="main_upload_type_imgbtn_style">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@drawable/dw_circle_assist_none</item>
+        <item name="android:elevation" tools:targetApi="lollipop">7dp</item>
+        <item name="android:scaleType">center</item>
+    </style>
+
+    <style name="main_upload_type_tv_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/item_divider</item>
+        <item name="android:textColor">@color/colorBackground</item>
+    </style>
+
+     login
+    <style name="login_more_tv_style">
+    <item name="android:layout_width">90dp</item>
+    <item name="android:layout_height">40dp</item>
+    <item name="android:background">@drawable/dw_fillet_landpale_land</item>
+    <item name="android:elevation" tools:targetApi="lollipop">4dp</item>
+    <item name="android:gravity">center</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textColor">@color/colorBackground</item>
+    </style>
+
+    <!-- upload_text -->
+    <style name="upload_text_nav_imgbtn_style">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:background">@drawable/dw_circle_assist_none</item>
+        <item name="android:elevation" tools:targetApi="lollipop">7dp</item>
+        <item name="android:scaleType">center</item>
+    </style>
+
+    <style name="upload_text_edittext_tv_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_marginEnd">@dimen/item_divider</item>
+        <item name="android:layout_marginStart">@dimen/item_divider</item>
+        <item name="android:drawablePadding">@dimen/item_half_divider</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="upload_text_frame_tv_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:drawablePadding">@dimen/item_half_divider</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingEnd">@dimen/item_opf_divider</item>
+        <item name="android:paddingStart">@dimen/item_opf_divider</item>
+        <item name="android:textSize">@dimen/text_middle_size</item>
     </style>
 
 

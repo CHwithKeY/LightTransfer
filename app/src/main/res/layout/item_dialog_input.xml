@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EditText xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_di_input_et"
+    android:layout_width="250dp"
+    android:layout_height="50dp"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center"
+    android:layout_marginTop="@dimen/item_double_divider"
+    android:background="@drawable/dw_square_white_accent"
+    android:gravity="center"
+    android:hint="请输入/选择对应的标签"
+    android:maxLines="1"
+    android:textSize="@dimen/text_large_size" />

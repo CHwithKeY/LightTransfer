@@ -16,7 +16,7 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_centerInParent="true"
-        android:background="@drawable/dw_assist_circle" />
+        android:background="@drawable/dw_circle_assist_none" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/main_download_fab"
