@@ -49,6 +49,8 @@ public abstract class BaseActivity extends Base_Act implements HttpURL, HttpKey,
         });
     }
 
+
+    //
     protected AlertDialog onCreateDlg(String title, View child_view) {
         final AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
@@ -59,6 +61,7 @@ public abstract class BaseActivity extends Base_Act implements HttpURL, HttpKey,
             dlg_title.setText(title);
         }
 
+        //
         if (child_view != null) {
 //            View child_view = View.inflate(this, layoutResId, null);
             final LinearLayout dlg_view_ll = dlg_empty_view.findViewById(R.id.page_ed_ll);
