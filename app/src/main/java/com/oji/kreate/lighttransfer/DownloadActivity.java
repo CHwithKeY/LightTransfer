@@ -10,11 +10,13 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 
+import com.oji.kreate.vsf.base.BaseHttpActivity;
+
 import org.json.JSONException;
 
 import java.util.ArrayList;
 
-public class DownloadActivity extends BaseActivity {
+public class DownloadActivity extends BaseHttpActivity {
 
     private RelativeLayout dt_layout;
     private RecyclerView tag_list_rv;
@@ -33,12 +35,6 @@ public class DownloadActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_download);
 
-        viewInit();
-
-        varInit();
-
-        setupToolbar();
-
         setupTagListImgBtn();
 
         setupTagListRecycler();
@@ -47,7 +43,13 @@ public class DownloadActivity extends BaseActivity {
 
     }
 
-    private void viewInit() {
+    @Override
+    public void varInit() {
+        disappearList = new ArrayList<>();
+    }
+
+    @Override
+    public void viewInit() {
         dt_layout = findViewById(R.id.download_text_layout);
         tag_list_rv = findViewById(R.id.dt_tag_list_rv);
         download_item_rv = findViewById(R.id.dt_download_item_rv);
@@ -58,11 +60,6 @@ public class DownloadActivity extends BaseActivity {
         tag_list_cv = findViewById(R.id.dt_tag_list_cv);
 
         shadow_view = findViewById(R.id.dt_shadow_view);
-    }
-
-    @Override
-    public void varInit() {
-        disappearList = new ArrayList<>();
     }
 
     @Override
@@ -192,6 +189,11 @@ public class DownloadActivity extends BaseActivity {
 
     @Override
     public void onPermissionRefused(int i) {
+
+    }
+
+    @Override
+    public void handleNetDownAction() {
 
     }
 }

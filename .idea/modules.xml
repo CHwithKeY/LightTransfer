@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/LightTransfer.iml" filepath="$PROJECT_DIR$/LightTransfer.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/vsf_1.2/vsf_1.2.iml" filepath="$PROJECT_DIR$/vsf_1.2/vsf_1.2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vsf_2.1/vsf_2.1.iml" filepath="$PROJECT_DIR$/vsf_2.1/vsf_2.1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vsf_2.2s/vsf_2.2s.iml" filepath="$PROJECT_DIR$/vsf_2.2s/vsf_2.2s.iml" />
     </modules>
   </component>
 </project>

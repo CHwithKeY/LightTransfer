@@ -10,6 +10,8 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/vsf_1.2" />
+            <option value="$PROJECT_DIR$/vsf_2.1" />
+            <option value="$PROJECT_DIR$/vsf_2.2s" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

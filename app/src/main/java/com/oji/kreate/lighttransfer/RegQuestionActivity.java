@@ -1,12 +1,10 @@
 package com.oji.kreate.lighttransfer;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-import android.view.View;
 
+import com.oji.kreate.vsf.base.BaseHttpActivity;
 import com.oji.kreate.vsf.publicAdapter.ViewBaseAdapter;
 
 import org.json.JSONException;
@@ -14,7 +12,7 @@ import org.json.JSONException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RegQuestionActivity extends BaseActivity {
+public class RegQuestionActivity extends BaseHttpActivity {
 
     private ViewPager question_vp;
 
@@ -78,5 +76,9 @@ public class RegQuestionActivity extends BaseActivity {
 
     }
 
+    @Override
+    public void handleNetDownAction() {
+
+    }
 
 }

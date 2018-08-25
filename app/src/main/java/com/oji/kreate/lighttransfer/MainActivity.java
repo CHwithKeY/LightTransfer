@@ -10,11 +10,11 @@ import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.oji.kreate.vsf.base.Base_Act;
+import com.oji.kreate.vsf.base.BaseHttpActivity;
 
 import org.json.JSONException;
 
-public class MainActivity extends Base_Act {
+public class MainActivity extends BaseHttpActivity {
 
     //    private TabLayout function_tab;
     //    private ViewPager function_vp;
@@ -39,12 +39,6 @@ public class MainActivity extends Base_Act {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.test_main);
 
-        viewInit();
-
-        varInit();
-
-        setupToolbar();
-
 //        setupViewPager();
 
         setupTestBtn();
@@ -61,7 +55,13 @@ public class MainActivity extends Base_Act {
 
     }
 
-    private void viewInit() {
+    @Override
+    public void varInit() {
+        uploadMode = true;
+    }
+
+    @Override
+    public void viewInit() {
         upload_fab = findViewById(R.id.main_upload_fab);
         download_fab = findViewById(R.id.main_download_fab);
         upload_bg_scale = findViewById(R.id.main_scale_bg);
@@ -73,15 +73,9 @@ public class MainActivity extends Base_Act {
     }
 
     @Override
-    public void varInit() {
-        uploadMode = true;
-    }
-
-    @Override
     protected void setupToolbar() {
 
     }
-
 //    private void setupViewPager() {
 ////        function_tab = findViewById(R.id.main_function_tab);
 //        function_vp = findViewById(R.id.main_function_vp);
@@ -377,6 +371,12 @@ public class MainActivity extends Base_Act {
     public void onPermissionRefused(int i) {
 
     }
+
+    @Override
+    public void handleNetDownAction() {
+
+    }
+
 
 
 }

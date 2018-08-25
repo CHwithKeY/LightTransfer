@@ -3,9 +3,11 @@ package com.oji.kreate.lighttransfer;
 import android.os.Bundle;
 import android.view.View;
 
+import com.oji.kreate.vsf.base.BaseHttpActivity;
+
 import org.json.JSONException;
 
-public class UserActivity extends BaseActivity {
+public class UserActivity extends BaseHttpActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +27,17 @@ public class UserActivity extends BaseActivity {
     }
 
     @Override
+    public void viewInit() {
+
+    }
+
+    @Override
     protected void setupToolbar() {
+
+    }
+
+    @Override
+    public void handleNetDownAction() {
 
     }
 

@@ -13,9 +13,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.oji.kreate.vsf.base.BaseHttpActivity;
+import com.oji.kreate.vsf.publicClass.Methods;
+
 import org.json.JSONException;
 
-public class LoginActivity extends BaseActivity {
+public class LoginActivity extends BaseHttpActivity {
 
     private LinearLayout welcome_ll;
 
@@ -28,10 +31,6 @@ public class LoginActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_layout);
-
-        varInit();
-
-        setupToolbar();
 
         setupWelcomeLinear();
 
@@ -55,7 +54,17 @@ public class LoginActivity extends BaseActivity {
     }
 
     @Override
+    public void viewInit() {
+
+    }
+
+    @Override
     protected void setupToolbar() {
+
+    }
+
+    @Override
+    public void handleNetDownAction() {
 
     }
 
@@ -101,7 +110,7 @@ public class LoginActivity extends BaseActivity {
         input_et.setHint("通行码长度在6~16位");
         input_et.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
 //        input_et.setSingleLine();
-        setMaxLength(input_et, 16);
+        Methods.setMaxLength(input_et, 16);
     }
 
     public String getInputEdit() {

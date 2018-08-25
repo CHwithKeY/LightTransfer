@@ -1,6 +1,5 @@
 package com.oji.kreate.lighttransfer;
 
-import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -10,10 +9,8 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
 import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.TextView;
 
-import com.oji.kreate.vsf.base.Base_Frag;
+import com.oji.kreate.vsf.base.BaseHttpFragment;
 
 import org.json.JSONException;
 
@@ -21,7 +18,7 @@ import org.json.JSONException;
  * Created by Kreate on 2018/3/9.
  */
 
-public class UploadFragment extends Base_Frag {
+public class UploadFragment extends BaseHttpFragment {
 
     private FloatingActionButton upload_fab;
     private FloatingActionButton download_fab;

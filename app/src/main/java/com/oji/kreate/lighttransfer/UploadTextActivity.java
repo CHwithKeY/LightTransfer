@@ -23,7 +23,10 @@ import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.oji.kreate.lighttransfer.http.HttpTag;
+import com.oji.kreate.vsf.base.BaseHttpActivity;
 import com.oji.kreate.vsf.publicAdapter.ViewBaseAdapter;
+import com.oji.kreate.vsf.publicClass.Methods;
 import com.oji.kreate.vsf.publicClass.ScreenSize;
 
 import org.json.JSONException;
@@ -34,7 +37,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class UploadTextActivity extends BaseActivity {
+public class UploadTextActivity extends BaseHttpActivity implements HttpTag {
 //    private DrawerLayout dwer;
 //    private View nav_expand;
 
@@ -103,6 +106,11 @@ public class UploadTextActivity extends BaseActivity {
 
     @Override
     protected void setupToolbar() {
+
+    }
+
+    @Override
+    public void handleNetDownAction() {
 
     }
 
@@ -307,7 +315,7 @@ public class UploadTextActivity extends BaseActivity {
         final ImageButton dlg_tag_confirm_imgbtn = transfer_view.findViewById(R.id.dlg_upload_tag_confirm_imgbtn);
         final EditText dlg_tag_et = transfer_view.findViewById(R.id.dlg_upload_tag_edit_tag_et);
         dlg_tag_et.setHint("标签");
-        setMaxLength(dlg_tag_et, 4);
+        Methods.setMaxLength(dlg_tag_et, 4);
 
         dlg_tag_confirm_imgbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -405,7 +413,7 @@ public class UploadTextActivity extends BaseActivity {
 
         List<Fragment> fragmentList = new ArrayList<>();
 
-        ArrayList<String> clipList = ClipUtil.getClipboardText(clipManager, sharedInfoAction);
+        ArrayList<String> clipList = ClipUtil.getClipboardText(clipManager, sharedAction);
         for (int i = 0; i < clipList.size(); i++) {
             Bundle bundle = new Bundle();
             bundle.putString(FragmentArgs.BUNDLE_KEY_TEXT, clipList.get(i));
@@ -754,7 +762,6 @@ public class UploadTextActivity extends BaseActivity {
             case TAG_UPLOAD_TEXT:
                 uploadAction.handleTextResponse(s1);
                 break;
-
         }
     }
 

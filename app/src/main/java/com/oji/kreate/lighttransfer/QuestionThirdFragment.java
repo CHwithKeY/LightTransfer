@@ -11,7 +11,9 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
-import com.oji.kreate.vsf.base.Base_Frag;
+import com.oji.kreate.vsf.base.BaseHttpActivity;
+import com.oji.kreate.vsf.base.BaseHttpFragment;
+import com.oji.kreate.vsf.publicClass.Methods;
 
 import org.json.JSONException;
 
@@ -19,7 +21,7 @@ import org.json.JSONException;
  * Created by Administrator on 2018/6/7.
  */
 
-public class QuestionThirdFragment extends Base_Frag implements View.OnClickListener {
+public class QuestionThirdFragment extends BaseHttpFragment implements View.OnClickListener {
 
     private LoginRegAction loginRegAction;
 
@@ -57,7 +59,8 @@ public class QuestionThirdFragment extends Base_Frag implements View.OnClickList
     public void varInit() {
         loginRegAction = new LoginRegAction(getContext());
 
-        ((RegQuestionActivity) getActivity()).collapseIME(R.id.fgm_rqt_layout);
+        Methods.collapseIME(getContext());
+        ((BaseHttpActivity) getActivity()).collapseIME(R.id.fgm_rqt_layout);
     }
 
     public void viewInit(View view) {

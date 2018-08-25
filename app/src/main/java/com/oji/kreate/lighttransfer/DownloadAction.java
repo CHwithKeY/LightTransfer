@@ -2,6 +2,11 @@ package com.oji.kreate.lighttransfer;
 
 import android.content.Context;
 
+import com.oji.kreate.lighttransfer.http.HttpKey;
+import com.oji.kreate.lighttransfer.http.HttpResult;
+import com.oji.kreate.lighttransfer.http.HttpTag;
+import com.oji.kreate.lighttransfer.http.HttpURL;
+import com.oji.kreate.vsf.base.BaseHttpAction;
 import com.oji.kreate.vsf.http.HttpAction;
 import com.oji.kreate.vsf.http.HttpHandler;
 
@@ -12,7 +17,7 @@ import org.json.JSONObject;
  * Created by Administrator on 2018/5/26.
  */
 
-public class DownloadAction extends BaseHttpAction {
+public class DownloadAction extends BaseHttpAction implements HttpKey, HttpResult, HttpTag, HttpURL {
 
     public DownloadAction(Context context) {
         super(context);

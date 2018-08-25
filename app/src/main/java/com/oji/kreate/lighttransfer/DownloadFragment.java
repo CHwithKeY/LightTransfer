@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.oji.kreate.vsf.base.Base_Frag;
+import com.oji.kreate.vsf.base.BaseHttpFragment;
 
 import org.json.JSONException;
 
@@ -14,7 +14,7 @@ import org.json.JSONException;
  * Created by Kreate on 2018/3/9.
  */
 
-public class DownloadFragment extends Base_Frag {
+public class DownloadFragment extends BaseHttpFragment {
 
     @Nullable
     @Override

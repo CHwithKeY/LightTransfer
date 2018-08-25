@@ -1,7 +1,7 @@
 package com.oji.kreate.lighttransfer;
 
-import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
 import android.text.InputFilter;
 import android.util.Log;
 import android.view.View;
@@ -10,45 +10,11 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.oji.kreate.lighttransfer.http.HttpKey;
-import com.oji.kreate.lighttransfer.http.HttpResult;
-import com.oji.kreate.lighttransfer.http.HttpTag;
-import com.oji.kreate.lighttransfer.http.HttpURL;
-import com.oji.kreate.lighttransfer.sharedInfo.SharedInfoAction;
-import com.oji.kreate.vsf.base.Base_Act;
-import com.oji.kreate.vsf.publicClass.Methods;
-
 /**
  * Created by Administrator on 2018/6/4.
  */
 
-public abstract class BaseActivity extends Base_Act implements HttpURL, HttpKey, HttpResult, HttpTag {
-
-    protected SharedInfoAction sharedInfoAction;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-//            WindowManager.LayoutParams localLayoutParams = getWindow().getAttributes();
-//            localLayoutParams.flags = (WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS | localLayoutParams.flags);
-//        }
-
-        sharedInfoAction = new SharedInfoAction(this);
-    }
-
-    protected void collapseIME(int viewResId) {
-        View view = findViewById(viewResId);
-
-        view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Methods.collapseIME(BaseActivity.this);
-            }
-        });
-    }
-
+public abstract class BaseActivity extends AppCompatActivity {
 
     //
     protected AlertDialog onCreateDlg(String title, View child_view) {

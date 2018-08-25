@@ -3,6 +3,11 @@ package com.oji.kreate.lighttransfer;
 
 import android.content.Context;
 
+import com.oji.kreate.lighttransfer.http.HttpKey;
+import com.oji.kreate.lighttransfer.http.HttpResult;
+import com.oji.kreate.lighttransfer.http.HttpTag;
+import com.oji.kreate.lighttransfer.http.HttpURL;
+import com.oji.kreate.vsf.base.BaseHttpAction;
 import com.oji.kreate.vsf.http.HttpAction;
 import com.oji.kreate.vsf.http.HttpHandler;
 
@@ -16,12 +21,10 @@ import java.util.ArrayList;
  * Created by Administrator on 2018/5/26.
  */
 
-public class UploadAction extends BaseHttpAction {
+public class UploadAction extends BaseHttpAction implements HttpKey, HttpResult, HttpTag, HttpURL {
 
     public UploadAction(Context context) {
         super(context);
-
-
     }
 
     public void getTags() {

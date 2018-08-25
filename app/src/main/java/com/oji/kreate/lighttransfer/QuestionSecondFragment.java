@@ -1,6 +1,6 @@
 package com.oji.kreate.lighttransfer;
 
-import com.oji.kreate.vsf.base.Base_Frag;
+import com.oji.kreate.vsf.base.BaseHttpFragment;
 
 import org.json.JSONException;
 
@@ -8,7 +8,7 @@ import org.json.JSONException;
  * Created by Administrator on 2018/6/7.
  */
 
-public class QuestionSecondFragment extends Base_Frag {
+public class QuestionSecondFragment extends BaseHttpFragment {
     @Override
     public void onMultiHandleResponse(String s, String s1) throws JSONException {
         

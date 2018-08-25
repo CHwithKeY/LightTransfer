@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.oji.kreate.vsf.base.Base_Frag;
+import com.oji.kreate.vsf.base.BaseHttpFragment;
 
 import org.json.JSONException;
 
@@ -18,7 +18,7 @@ import org.json.JSONException;
  * Created by Administrator on 2018/6/1.
  */
 
-public class MultiBoardFragment extends Base_Frag {
+public class MultiBoardFragment extends BaseHttpFragment {
 
     private ClipboardManager clipManager;
     private TextView multiBoard_tv;
