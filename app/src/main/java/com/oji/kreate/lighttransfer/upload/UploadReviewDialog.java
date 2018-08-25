@@ -1,4 +1,4 @@
-package com.oji.kreate.lighttransfer;
+package com.oji.kreate.lighttransfer.upload;
 
 import android.app.Dialog;
 import android.os.Bundle;
@@ -8,6 +8,8 @@ import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.oji.kreate.lighttransfer.R;
 
 /**
  * Created by Administrator on 2018/5/26.

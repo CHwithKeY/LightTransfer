@@ -1,4 +1,4 @@
-package com.oji.kreate.lighttransfer;
+package com.oji.kreate.lighttransfer.download;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.oji.kreate.lighttransfer.R;
 import com.oji.kreate.vsf.base.BaseHttpFragment;
 
 import org.json.JSONException;

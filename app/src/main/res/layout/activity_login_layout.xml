@@ -5,7 +5,7 @@
     android:id="@+id/login_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.oji.kreate.lighttransfer.LoginActivity">
+    tools:context="com.oji.kreate.lighttransfer.loginReg.LoginActivity">
 
     <ImageView
         android:id="@+id/login_bg_fst_img"

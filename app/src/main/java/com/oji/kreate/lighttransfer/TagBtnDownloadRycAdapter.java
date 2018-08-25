@@ -3,7 +3,6 @@ package com.oji.kreate.lighttransfer;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.RelativeLayout;
 
 import com.oji.kreate.vsf.publicAdapter.BaseRycAdapter;
 import com.oji.kreate.vsf.publicClass.Methods;
@@ -64,6 +63,6 @@ public abstract class TagBtnDownloadRycAdapter extends BaseRycAdapter {
         }
     }
 
-    abstract void onClickTag(View view);
+    public abstract void onClickTag(View view);
 
 }

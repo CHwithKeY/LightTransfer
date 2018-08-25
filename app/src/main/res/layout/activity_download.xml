@@ -5,7 +5,7 @@
     android:id="@+id/download_text_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.oji.kreate.lighttransfer.DownloadActivity">
+    tools:context="com.oji.kreate.lighttransfer.download.DownloadActivity">
 
     <!--<RelativeLayout-->
     <!--android:id="@+id/dt_download_item_rl"-->

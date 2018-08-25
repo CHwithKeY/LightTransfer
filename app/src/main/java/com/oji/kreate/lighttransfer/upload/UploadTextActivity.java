@@ -1,4 +1,4 @@
-package com.oji.kreate.lighttransfer;
+package com.oji.kreate.lighttransfer.upload;
 
 import android.app.Dialog;
 import android.content.ClipboardManager;
@@ -23,6 +23,12 @@ import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.oji.kreate.lighttransfer.AnimationUtil;
+import com.oji.kreate.lighttransfer.ClipUtil;
+import com.oji.kreate.lighttransfer.FragmentArgs;
+import com.oji.kreate.lighttransfer.MultiBoardFragment;
+import com.oji.kreate.lighttransfer.R;
+import com.oji.kreate.lighttransfer.TagBtnDownloadRycAdapter;
 import com.oji.kreate.lighttransfer.http.HttpTag;
 import com.oji.kreate.vsf.base.BaseHttpActivity;
 import com.oji.kreate.vsf.publicAdapter.ViewBaseAdapter;
@@ -302,12 +308,14 @@ public class UploadTextActivity extends BaseHttpActivity implements HttpTag {
 //            }
 //        };
 
+
         TagBtnDownloadRycAdapter adapter = new TagBtnDownloadRycAdapter(tagList) {
             @Override
-            void onClickTag(View view) {
+            public void onClickTag(View view) {
 
             }
         };
+
 
         dlg_tag_list_rv.setAdapter(adapter);
 

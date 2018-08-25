@@ -1,4 +1,4 @@
-package com.oji.kreate.lighttransfer;
+package com.oji.kreate.lighttransfer.download;
 
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
@@ -10,6 +10,9 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 
+import com.oji.kreate.lighttransfer.AnimationUtil;
+import com.oji.kreate.lighttransfer.R;
+import com.oji.kreate.lighttransfer.TagBtnDownloadRycAdapter;
 import com.oji.kreate.vsf.base.BaseHttpActivity;
 
 import org.json.JSONException;
@@ -90,7 +93,7 @@ public class DownloadActivity extends BaseHttpActivity {
 
         TagBtnDownloadRycAdapter adapter = new TagBtnDownloadRycAdapter(tagList) {
             @Override
-            void onClickTag(View view) {
+            public void onClickTag(View view) {
                 Button button = (Button) view;
             }
         };

@@ -12,8 +12,8 @@
         <activity android:name=".MainActivity">
 
         </activity>
-        <activity android:name=".UploadTextActivity" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".upload.UploadTextActivity" />
+        <activity android:name=".loginReg.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,8 +21,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".UserActivity" />
-        <activity android:name=".RegQuestionActivity" />
-        <activity android:name=".DownloadActivity" />
+        <activity android:name=".loginReg.RegQuestionActivity" />
+        <activity android:name=".download.DownloadActivity" />
         <activity android:name=".TestActivity">
 
         </activity>

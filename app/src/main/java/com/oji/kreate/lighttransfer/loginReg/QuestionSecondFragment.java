@@ -1,4 +1,4 @@
-package com.oji.kreate.lighttransfer;
+package com.oji.kreate.lighttransfer.loginReg;
 
 import com.oji.kreate.vsf.base.BaseHttpFragment;
 

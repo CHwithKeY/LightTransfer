@@ -1,4 +1,4 @@
-package com.oji.kreate.lighttransfer;
+package com.oji.kreate.lighttransfer.loginReg;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +13,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.oji.kreate.lighttransfer.AnimationUtil;
+import com.oji.kreate.lighttransfer.IntentSet;
+import com.oji.kreate.lighttransfer.R;
 import com.oji.kreate.vsf.base.BaseHttpActivity;
 import com.oji.kreate.vsf.publicClass.Methods;
 

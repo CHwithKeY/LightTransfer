@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.oji.kreate.lighttransfer.upload.UploadTextActivity;
 import com.oji.kreate.vsf.base.BaseHttpFragment;
 
 import org.json.JSONException;

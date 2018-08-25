@@ -1,4 +1,4 @@
-package com.oji.kreate.lighttransfer;
+package com.oji.kreate.lighttransfer.loginReg;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +11,10 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
+import com.oji.kreate.lighttransfer.AnimationUtil;
+import com.oji.kreate.lighttransfer.MainActivity;
+import com.oji.kreate.lighttransfer.R;
+import com.oji.kreate.lighttransfer.loginReg.LoginRegAction;
 import com.oji.kreate.vsf.base.BaseHttpActivity;
 import com.oji.kreate.vsf.base.BaseHttpFragment;
 import com.oji.kreate.vsf.publicClass.Methods;
@@ -99,7 +103,7 @@ public class QuestionThirdFragment extends BaseHttpFragment implements View.OnCl
 
     private void initAnswerEdit() {
         answer_et.setSingleLine();
-        ((BaseActivity) getActivity()).setMaxLength(answer_et, 10);
+        Methods.setMaxLength(answer_et, 10);
     }
 
     private void setupAnswerEdit(View radio_view) {

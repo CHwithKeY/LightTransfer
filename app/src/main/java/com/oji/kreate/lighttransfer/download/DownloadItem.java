@@ -1,4 +1,4 @@
-package com.oji.kreate.lighttransfer;
+package com.oji.kreate.lighttransfer.download;
 
 /**
  * Created by Administrator on 2018/6/30.

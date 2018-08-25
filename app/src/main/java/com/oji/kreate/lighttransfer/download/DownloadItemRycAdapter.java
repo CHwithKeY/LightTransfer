@@ -1,9 +1,10 @@
-package com.oji.kreate.lighttransfer;
+package com.oji.kreate.lighttransfer.download;
 
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.oji.kreate.lighttransfer.R;
 import com.oji.kreate.vsf.publicAdapter.BaseRycAdapter;
 import com.oji.kreate.vsf.publicClass.Methods;
 

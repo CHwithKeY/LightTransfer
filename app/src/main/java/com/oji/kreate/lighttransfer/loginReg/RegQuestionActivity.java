@@ -1,9 +1,10 @@
-package com.oji.kreate.lighttransfer;
+package com.oji.kreate.lighttransfer.loginReg;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 
+import com.oji.kreate.lighttransfer.R;
 import com.oji.kreate.vsf.base.BaseHttpActivity;
 import com.oji.kreate.vsf.publicAdapter.ViewBaseAdapter;
 
